@@ -8,8 +8,8 @@
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=39.107.13.93;dbname=yii2Project',
-    'username' => '',
-    'password' => '',
+    'username' => 'yii2Project',
+    'password' => 'wang123567wang',
     'charset' => 'utf8',
     'tablePrefix' => 'pro_',   //加入前缀名称pro_
 ];
