@@ -2,7 +2,6 @@
 
 namespace common\models;
 
-use Yii;
 
 /**
  * This is the model class for table "pro_media".
@@ -16,7 +15,7 @@ use Yii;
  * @property string $created_at 创建时间
  * @property string $updated_at 修改时间
  */
-class Media extends \yii\db\ActiveRecord
+class Media extends BaseModel
 {
     /**
      * {@inheritdoc}

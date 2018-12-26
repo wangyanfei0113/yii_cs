@@ -18,7 +18,7 @@ use Yii;
  * @property string $type 发送类型
  * @property string $created_at 创建时间
  */
-class MessageHistory extends \yii\db\ActiveRecord
+class MessageHistory extends BaseModel
 {
     /**
      * {@inheritdoc}

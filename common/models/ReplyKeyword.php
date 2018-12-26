@@ -17,7 +17,7 @@ use Yii;
  * @property string $created_at 创建时间
  * @property string $updated_at 修改时间
  */
-class ReplyKeyword extends \yii\db\ActiveRecord
+class ReplyKeyword extends BaseModel
 {
     /**
      * {@inheritdoc}

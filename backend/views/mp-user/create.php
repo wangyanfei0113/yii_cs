@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\MpUser */
 
-$this->title = 'Create Mp User';
-$this->params['breadcrumbs'][] = ['label' => 'Mp Users', 'url' => ['index']];
+$this->title = '用户创建';
+$this->params['breadcrumbs'][] = ['label' => 'mp用户', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mp-user-create">

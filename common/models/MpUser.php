@@ -37,7 +37,7 @@ class MpUser extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id'], 'required'],
+            //[['id'], 'required'],
             [['id', 'sex', 'subscribe_time', 'group_id', 'updated_at'], 'integer'],
             [['nickname'], 'string', 'max' => 20],
             [['city', 'country', 'province', 'language'], 'string', 'max' => 40],
