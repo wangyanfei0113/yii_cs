@@ -38,7 +38,6 @@ class MpUserController extends Controller
         $dataProvider = new ActiveDataProvider([
             'query' => MpUser::find(),
         ]);
-
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);
