@@ -1,6 +1,6 @@
 <?php
 $db = require 'db.php';
-return [
+$config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -13,3 +13,4 @@ return [
         'db'=>$db,
     ],
 ];
+return $config;

@@ -130,3 +130,28 @@ server {
         }
     }
 ````
+--------------
+````
+1.添加model
+php yii gii/model --ns=common\models --tableName=pro_user --modelClass=User
+php yii gii/model --ns=common\models --tableName=pro_wechat --modelClass=Wechat
+php yii gii/model --ns=common\models --tableName=pro_mpUser --modelClass=MpUser
+php yii gii/model --ns=common\models --tableName=pro_fans --modelClass=Fans
+php yii gii/model --ns=common\models --tableName=pro_media --modelClass=Media
+php yii gii/model --ns=common\models --tableName=pro_module --modelClass=Module
+php yii gii/model --ns=common\models --tableName=pro_reply_rule --modelClass=ReplyRule
+php yii gii/model --ns=common\models --tableName=pro_reply_rule_keyword --modelClass=ReplyKeyword
+php yii gii/model --ns=common\models --tableName=pro_message_history --modelClass=MessageHistory
+
+
+
+2.添加crud
+php yii gii/crud --modelClass=common\models\User --controllerClass=backend\controllers\UserController --viewPath=backend\views\user
+php yii gii/crud --modelClass=common\models\Wechat --controllerClass=backend\controllers\WechatController --viewPath=backend\views\wechat
+php yii gii/crud --modelClass=common\models\MpUser --controllerClass=backend\controllers\MpUserController --viewPath=backend\views\mpuser
+php yii gii/crud --modelClass=common\models\Fans --controllerClass=backend\controllers\FansController --viewPath=backend\views\fans
+php yii gii/crud --modelClass=common\models\Media --controllerClass=backend\controllers\MediaController --viewPath=backend\views\media
+php yii gii/crud --modelClass=common\models\Module --controllerClass=backend\controllers\ModuleController --viewPath=backend\views\module
+php yii gii/crud --modelClass=common\models\ReplyRule --controllerClass=backend\controllers\ReplyRuleController --viewPath=backend\views\replyrule
+php yii gii/crud --modelClass=common\models\ReplyKeyword --controllerClass=backend\controllers\ReplyController --viewPath=backend\views\reply
+php yii gii/crud --modelClass=common\models\MessageHistory --controllerClass=backend\controllers\MessageController --viewPath=backend\views\message

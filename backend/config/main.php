@@ -4,7 +4,7 @@ $params = array_merge(
     require __DIR__ . '/params.php'
 );
 
-return [
+$config = [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
@@ -13,6 +13,7 @@ return [
     'components' => [
         'request' => [
             //'csrfParam' => '_csrf-backend',
+            'enableCookieValidation' => false,
             'cookieValidationKey' => 'dK9jY-z1uUZsIGCXcVi9dDtuCfUJJcT2',
         ],
         'user' => [
@@ -43,7 +44,28 @@ return [
             'rules' => [
             ],
         ],
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+                ],
+            ],
+        ],
 
     ],
     'params' => $params,
 ];
+if (YII_ENV_DEV) {
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        'generators' => [ // HERE
+            'crud' => [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates' => [
+                    'adminlte' => '@vendor/dmstr/yii2-adminlte-asset/gii/templates/crud/simple',
+                ]
+            ]
+        ],
+    ];
+}
+return $config;
