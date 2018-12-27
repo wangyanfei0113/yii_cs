@@ -155,3 +155,19 @@ php yii gii/crud --modelClass=common\models\Module --controllerClass=backend\con
 php yii gii/crud --modelClass=common\models\ReplyRule --controllerClass=backend\controllers\ReplyRuleController --viewPath=backend\views\replyrule
 php yii gii/crud --modelClass=common\models\ReplyKeyword --controllerClass=backend\controllers\ReplyController --viewPath=backend\views\reply
 php yii gii/crud --modelClass=common\models\MessageHistory --controllerClass=backend\controllers\MessageController --viewPath=backend\views\message
+
+3.crud使用adminlte模板
+console->config->main.php 添加以下代码
+if (YII_ENV_DEV) {
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        'generators' => [ // HERE
+            'crud' => [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates' => [
+                    'adminlte' => '@vendor/dmstr/yii2-adminlte-asset/gii/templates/crud/simple',
+                ]
+            ]
+        ],
+    ];
+}
